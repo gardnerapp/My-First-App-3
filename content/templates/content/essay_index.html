@@ -1,0 +1,16 @@
+{% extends  "content/base.html"%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Essay Index</title>
+</head>
+<body>
+{% block content %}
+    {% for essay in essayList %}
+        <h2><a href="{% url 'MySite:essay' essay.title %}">{{ essay.title }} {{ essay.pub_date }}</a>
+        </h2>
+    {% endfor %}
+{% endblock %}
+</body>
+</html>

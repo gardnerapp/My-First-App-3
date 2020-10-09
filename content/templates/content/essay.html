@@ -1,0 +1,16 @@
+{% extends "content/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block content %}
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'content/essaystyle.css'%}">
+        <h5 class="title">{{ title }}</h5>
+        <p class="text">{{ text }}</p>
+    {% endblock %}
+</body>
+</html>

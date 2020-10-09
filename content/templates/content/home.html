@@ -1,0 +1,9 @@
+{% extends  "content/base.html"%}
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+{% block content %}
+    {% for essay in latest_essays %}
+        <h2><a href="{% url 'MySite:essay' essay.title %}">{{ essay.title }} </a></h2>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<title>Base</title>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'content/basestyle.css'%}">
+<body>
+<div style="max-width:1600px">
+  <header>
+    <h1><b>Corey's Corner</b></h1>
+    <h5>Welcome To My Corner Of The Internet</h5>
+  </header>
+
+    <div class="banner" >
+      <a href="{% url "MySite:home" %}" >Home</a>
+      <a href="{% url "MySite:essayIndex" %}" >Essays</a>
+        <a href="https://podcasts.apple.com/us/podcast/coreys-corner/id1479097455">Podcast</a>
+         <a href="https://www.youtube.com/channel/UCaLrLQ2w81iybR0o9eHlh4w">Youtube</a>
+    </div>
+<div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
